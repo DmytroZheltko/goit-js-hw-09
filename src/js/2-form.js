@@ -24,6 +24,8 @@ function loadFromLocalStorage() {
   }
 }
 
+loadFromLocalStorage();
+
 form.addEventListener('input', event => {
   const { name, value } = event.target;
   formData[name] = value.trim();
@@ -44,5 +46,3 @@ form.addEventListener('submit', event => {
   formData.message = '';
   form.reset();
 });
-
-loadFromLocalStorage();
